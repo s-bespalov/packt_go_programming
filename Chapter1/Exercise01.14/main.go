@@ -21,7 +21,7 @@ func main() {
 		fmt.Printf("count3: %#v\n", *count3)
 	}
 	if t != nil {
-		fmt.Printf("time : %#v\n", *t)	
+		fmt.Printf("time : %#v\n", *t)
 		fmt.Printf("time : %#v\n", t.String())
 	}
 }
