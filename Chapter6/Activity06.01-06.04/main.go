@@ -33,6 +33,13 @@ func main() {
 }
 
 func (d *DirectDeposit) validateRoutingNumber() error {
+	defer func() {
+		if r := recover(); r != nil {
+			if err, ok := r.(error); ok {
+				fmt.Println(err)
+			}
+		}
+	}()
 	if d.routingNumber < 100 {
 		panic(ErrInvalidRoutingNumber)
 	}
