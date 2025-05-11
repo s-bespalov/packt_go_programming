@@ -34,7 +34,7 @@ func main() {
 
 func (d *DirectDeposit) validateRoutingNumber() error {
 	if d.routingNumber < 100 {
-		return ErrInvalidRoutingNumber
+		panic(ErrInvalidRoutingNumber)
 	}
 	return nil
 }
