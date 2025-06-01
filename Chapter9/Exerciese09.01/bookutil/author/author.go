@@ -12,7 +12,7 @@ func NewAuthor(name, contact string) *Author {
 }
 
 func (a *Author) WriteChapter(chapterTitle string, content string) {
-	fmt.Printf("Author %s is writing a chapter titled a.Name, chapterTitle)'%s'\n", a.Name, chapterTitle)
+	fmt.Printf("Author %s is writing a chapter titled '%s'\n", a.Name, chapterTitle)
 	fmt.Println(content)
 }
 
@@ -22,5 +22,5 @@ func (a *Author) ReviewChapter(chapterTitle string, content string) {
 }
 
 func (a *Author) FinalizeChapter(chapterTitle string) {
-	fmt.Printf("Author %s has finalized the chapter titled'%s'.\n", a.Name, chapterTitle)
+	fmt.Printf("Author %s has finalized the chapter titled '%s'.\n", a.Name, chapterTitle)
 }
