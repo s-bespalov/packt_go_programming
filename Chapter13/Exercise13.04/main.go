@@ -9,7 +9,7 @@ import (
 
 func main() {
 	timeLimit := 5 * time.Second
-	fmt.Println("Press Enter to start the stopwatch...")
+	fmt.Print("Press Enter to start the stopwatch...")
 	_, err := fmt.Scanln()
 	if err != nil {
 		fmt.Println("Error reading from stdin:")
