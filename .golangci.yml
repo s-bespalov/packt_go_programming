@@ -1,0 +1,27 @@
+version: "2"  # mandatory for v2
+
+linters:
+  default: none       # disable all linters by default
+  enable:
+    - errcheck        # check for unchecked errors
+    - staticcheck     # includes gosimple checks
+    - govet           # standard vet checks
+    - ineffassign     # detect unused assignments
+
+linters-settings:
+  errcheck:
+    check-type-assertions: true  # check errors from type assertions
+    check-blank: true            # check assignments to blank identifier
+    check-defer: true            # check errors in defer statements (e.g., Close)
+
+run:
+  timeout: 5m         # maximum time for linting
+  tests: true         # also check test files
+  skip-dirs:
+    - vendor          # skip vendor directory
+  skip-files:
+    - ".*_generated.go"  # skip generated files
+
+output:
+  format: colored-line-number   # format compatible with VS Code
+  sort-results: true            # sort results by filename and line
