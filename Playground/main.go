@@ -225,14 +225,14 @@ func (g graph) renderGrid(step searchStep, path []cell, highlightPath bool) stri
 
 	var builder strings.Builder
 	builder.WriteString("    ")
-	for c := 0; c < cols; c++ {
-		builder.WriteString(fmt.Sprintf("%3d", c))
+	for c := range [cols]int{} {
+		fmt.Fprintf(&builder, "%3d", c)
 	}
 	builder.WriteByte('\n')
 
-	for r := 0; r < rows; r++ {
-		builder.WriteString(fmt.Sprintf("%3d ", r))
-		for c := 0; c < cols; c++ {
+	for r := range [rows]int{} {
+		fmt.Fprintf(&builder, "%3d ", r)
+		for c := range [cols]int{} {
 			cell := cell{row: r, col: c}
 			builder.WriteString(g.cellSymbol(cell, step.current, visitedSet, queueSet, pathSet))
 		}
