@@ -60,6 +60,9 @@ func TestDatabaseIntegration(t *testing.T) {
 	assert.NoError(t, err, "Error inserting record into the database")
 	retrieveRecord, err := dbInstance.GetRecordByID(context.Background(), 1)
 	assert.NoError(t, err, "Error retrieving record from the database")
-	assert.Equal(t, testRecord, retrieveRecord, "Retrieved record does not match the inserted record")
+	assert.Equal(t,
+		testRecord,
+		retrieveRecord,
+		"Retrieved record does not match the inserted record")
 	assert.NoError(t, mock.ExpectationsWereMet())
 }
