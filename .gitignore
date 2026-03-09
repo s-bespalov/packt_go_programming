@@ -24,3 +24,6 @@ go.work.sum
 # env file
 .env
 Chapter1/Exercise01.14/logfile
+
+# Ignore files without extensions (executables, compiled binaries)
+*[!./]
