@@ -25,5 +25,11 @@ go.work.sum
 .env
 Chapter1/Exercise01.14/logfile
 
-# Ignore files without extensions (executables, compiled binaries)
-*[!./]
+# Compiled Go binaries (no extension, macOS/Linux)
+Chapter20/Exercise20.01/hello_world
+Chapter21/Exercise21.01/monitored_app
+Playground/haiku/dfs_visualizer
+Playground/opus/astar
+Playground/sonnet/bfs_visualization
+Playground/sonnet/bfs_viz
+
